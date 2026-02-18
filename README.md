@@ -10,7 +10,7 @@ O sistema lê certidões de condenação em PDF, extrai os dados dos responsáve
 
 | Arquivo | Responsabilidade |
 |---|---|
-| `extrator_certidao.py` | Interface principal — extrai dados do PDF da certidão TCE e gera a petição inicial (.docx / .pdf) |
+| 'main.py` | Interface principal — extrai dados do PDF da certidão TCE e gera a petição inicial (.docx / .pdf) |
 | `gestor_enderecos.py` | Extrai endereços do PDF de imputação de débito via OCR e os persiste no banco |
 | `enviador_peticao.py` | Seleciona a certidão, monta o envelope SOAP e protocola no PJe TJPI |
 
@@ -61,7 +61,7 @@ python gestor_enderecos.py
 ## Fluxo de uso
 
 ```
-1. Abrir extrator_certidao.py
+1. Abrir main.py
 2. Carregar PDF da certidão TCE/PI  →  dados extraídos automaticamente
 3. Carregar PDF de imputação de débito  →  endereços extraídos via OCR
 4. Sistema gera petição inicial (.docx + .pdf)
@@ -117,7 +117,7 @@ Comarcas pré-cadastradas: Altos, Barras, Campo Maior, Corrente, Esperantina, Fl
 
 ```
 .
-├── extrator_certidao.py     # Módulo principal
+├── main.py     # Módulo principal
 ├── gestor_enderecos.py      # Extração OCR de endereços
 ├── enviador_peticao.py      # Envio ao PJe TJPI
 ├── certidoes_tce.db         # Banco de dados (gerado automaticamente)
